@@ -4,11 +4,166 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>테스트</title>
+    <style>
+      h1,
+      h2,
+      h3 {
+        border: 1px solid red;
+      }
+
+      p {
+        border: 1px solid green;
+      }
+
+      ol,
+      ul {
+        border: 1px solid blue;
+      }
+
+      div {
+        border: 4px solid black;
+        width: 1000px;
+      }
+
+      strong {
+        border: 1px solid red;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <h1>깃 프로젝트 생성</h1>
-    <h2>중제목 추가</h2>
-    <h3>소제목 추가</h3>
-    <script src="./index.js"></script>
+    <!-- 주석 내용 (단축키 ctrl+/)-->
+    <div>
+      <!-- 임의의 문장으로 문자더미 생성: lorem100 (숫자 조절가능) -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nesciunt
+        necessitatibus voluptates, ex atque laboriosam earum quibusdam sed eum
+        ab, quos cupiditate et veritatis saepe at totam excepturi. Corporis
+        necessitatibus aliquid minus? Nesciunt reiciendis repellat veniam
+        maiores rerum! Deserunt vitae aperiam expedita sequi non nesciunt dicta
+        praesentium repellat corrupti minus!
+      </p>
+
+      <!-- Ordered list: 순서가 중요한 목록 (순위 작성시 필요) -->
+      <ol>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+      </ol>
+
+      <!-- UnOrdered list: 순서가 중요하지 않은 목록 (순위 작성시 필요) -->
+      <ul>
+        <li>리스트</li>
+        <li>리스트</li>
+        <li>리스트</li>
+      </ul>
+
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+      </ul>
+
+      <div>
+        <h1>title</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+          numquam totam provident nobis unde voluptatum quos id molestiae rem
+          quo maiores debitis atque culpa sit facilis quisquam, quas libero
+          sunt?
+        </p>
+      </div>
+
+      <!-- div>hi{title}+ul>li*3{list$} -->
+      <div>
+        <hi>title</hi>
+        <ul>
+          <li>list1</li>
+          <li>list2</li>
+          <li>list3</li>
+        </ul>
+      </div>
+
+      <!-- 
+        블록 요소 태그의 특징
+        1. 너비값 미 지정시 부모요소의 너비 100% 자동 할당
+        2. 무조건 줄바꿈 처리됨
+        3. 너비, 높이 변경가능
+        4. 블록요소는 블, 인라인 모두 감쌀수 있음
+      -->
+      <h1>제목1</h1>
+      <h2>제목2</h2>
+      <h3>제목3</h3>
+      <!--
+        미션: p태그는 초록색 실선 적용
+        미션: ol, ul태그는 파란색 실선 적용
+      -->
+
+      <p>
+        <strong>학교</strong>종이 <em>땡땡땡</em> 어서모이자.
+        <!-- title: 웹 접근성을 위한 속성 -->
+        <a
+          href="https://www.naver.com"
+          target="_blank"
+          title="강사 소개페이지로 이동"
+          >선생님</a
+        >이 우리를 기다리신다.
+      </p>
+
+      <div style="width: 100%">
+        <!-- 
+          경로 설정법
+          상대 경로: 현재 작성하는 문서파일의 위치에 따른 상대적인 경로
+          절대 경로: 현재 작성파일 위치 상관없이 무조건 루트에서 찾는 경로
+        -->
+        <img
+          src="https://images.unsplash.com/photo-1740471230710-94fbcbb6c330?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="남자가 자전거 타는 이미지"
+        />
+
+        <!-- 
+          inline-block요소 특직
+          1. 요소, 자신의 크기만 할당(inline)
+          2. 너비, 높이 지정 가능 (block)
+          3. 줄바꿈 안됨(inline)
+        -->
+
+        <!-- 
+          프로젝트명: 취업용 포폴 페이지
+          목적: 최대한 나의 유능함을 어필해서 많은 면접 제의 받기
+          필요 기능
+          - 면접관의 첫인상을 사로잡을 후크 포인트
+          - 내소개
+          - 내 작업물 소개
+          - 나의 작업 히스토리 어필 (중요한 사람한테만)
+          - 로그인 기능
+
+          sitemap : 웹사이트의 구조를 한눈에 파악할 수 있도록 페이지 구성과 계층 관계를 정리한 설계도
+          - home : 인터랙티브한 모션으로 처음 방문한 사용자의 흥미 유발
+          - profile : 내 개인 소개및 포폴 및 블로그 확인 가능 링크
+          - portfolio list : 내 작업물 목록 소개(카드형) -> 클릭시 상세 페이지 이동
+          - portfolio detail : 포폴 상세 페이지 
+          - blog list : 일상 공유리스트 형태
+          - blog detail : 블로그 상세 페이지
+          - join : 회원정보 입력 받는 페이지
+          - login : 로그인 화면 페이지
+          - result : 회원 가입후 안내 메시지 페이지
+          - 카피라이트
+
+          UX를 고려한 Navigation UI설계 (사이트 메뉴 설계)
+          - 메인 인트로 페이지 (Intro)
+          - 자기 소개 페이지 (About me)
+          - 포트폴리오 페이지 (My works)
+          - 블로그 페이지 (Diary)
+          - 회원가입 페이지 (Join)
+          - 로그인 페이지 (Login)
+        -->
+      </div>
+    </div>
   </body>
 </html>
